@@ -12,7 +12,7 @@ const Formulario = () => {
 
     const [alerta, setAlerta] = useState('')
     const { categorias } = useCategorias()
-    const {consultarBebida} = useBebidas()
+    const { consultarBebida } = useBebidas()
 
     const handleSubmit = e => {
         e.preventDefault()
@@ -51,8 +51,10 @@ const Formulario = () => {
 
                 <Col md={6}>
                     <Form.Group className="mb-3">
-                        <Form.Label htmlFor="categoria">Categoría Bebida</Form.Label>
+                        <Form.Label htmlFor="categoria" className="d-block">Categoría Bebida</Form.Label>
                         <Form.Select
+                            className="w-100"
+                            aria-label="Default select example"
                             id="categoria"
                             name="categoria"
                             value={busqueda.categoria}
